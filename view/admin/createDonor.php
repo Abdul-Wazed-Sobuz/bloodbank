@@ -6,14 +6,20 @@
     <h1 style="padding: 20px, 0px !important">Create Donor</h1>
     <form>
 
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="name" class="form-control" id="name" placeholder="Enter donor name">
+        <div class="form-row my-3">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+            </div>
         </div>
 
         <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter donor email">
+            <label for="name">Name</label>
+            <input type="name" class="form-control" id="name" placeholder="Enter donor name">
         </div>
 
         <div class="form-group">
@@ -27,15 +33,15 @@
         </div>
 
         <div class="form-row my-3">
-        <div class="form-group col-md-6">
-            <label for="dob">Date of Birth</label>
-            <input type="date" class="form-control" id="dob">
-        </div>
+            <div class="form-group col-md-6">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob">
+            </div>
 
-        <div class="form-group col-md-6">
-            <label for="ld">Last Donation</label>
-            <input type="date" class="form-control" id="ld">
-        </div>
+            <div class="form-group col-md-6">
+                <label for="ld">Last Donation</label>
+                <input type="date" class="form-control" id="ld">
+            </div>
         </div>
 
         <div class="form-group">
