@@ -4,37 +4,37 @@
 
 <div class="container my-5">
     <h1 style="padding: 20px, 0px !important">Create Hospital</h1>
-    <form>
+    <form method="post" action="../../controller/process.php">
 
         <div class="form-row my-3">
             <div class="form-group col-md-6">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
             </div>
             <div class="form-group col-md-6">
-                <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
             </div>
         </div>
         <div class="form-group">
-            <label for="hname">Hospital Name</label>
-            <input type="name" class="form-control" id="name" placeholder="Hospital Name">
+            <label for="hospital_name">Hospital Name</label>
+            <input type="text" class="form-control" id="name" name="hospital_name" placeholder="Hospital Name">
         </div>
 
 
 
         <div class="form-group">
-            <label for="phone">Hospital Phone</label>
-            <input type="text" class="form-control" id="phone" placeholder="+88">
+            <label for="hospital_phone">Hospital Phone</label>
+            <input type="text" class="form-control" id="phone" name="hospital_phone" placeholder="+88">
         </div>
 
         <div class="form-group">
-            <label for="address">Hospital Address</label>
-            <input type="txt" class="form-control" id="address" placeholder="Hospital Address">
+            <label for="hospital_address">Hospital Address</label>
+            <input type="txt" class="form-control" id="address" name="hospital_address" placeholder="Hospital Address">
         </div>
 
         <div class="d-flex">
-            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="submit" class="btn btn-primary" name="save" value="submit">Create</button>
             <a href="admindash.php"><button class="btn btn-primary mx-3">Back</button></a>
         </div>
     </form>
