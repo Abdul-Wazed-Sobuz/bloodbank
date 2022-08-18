@@ -9,13 +9,13 @@ if(isset($_POST['save']))
     $name=$_POST['name'];
     $phone=$_POST['phone'];
     $address=$_POST['address'];
-    $dob = $_POST['dob'];
-    $ld = $_POST['ld'];
+   $dob =  date("m/d/Y",strtotime(@$_POST['dob']));
+   $ld =  date("m/d/Y",strtotime(@$_POST['ld']));
+
+    // echo $dob;
+    // echo $ld;
+   
     $bgroup = $_POST['bgroup'];
-    $date1=date_create($dob);
-    $date2=date_create($ld);
-    $dobf=date_format($date1,"m/d/Y");
-    $ldf=date_format($date2,"m/d/Y");
 
     $query=oci_parse($conn,"insert into ACCOUNT(email,password,type) values('$email','$password',4)");
     $result = oci_execute($query);
@@ -28,7 +28,9 @@ if(isset($_POST['save']))
             while (($row = oci_fetch_assoc($stid)) != false) {
            $account_id=$row['ACCOUNT_ID'];   
             }
-        $query2=oci_parse($conn,"insert into DONOR(name,email,phone,address,date_of_birth,blood_group,last_donation,account_id) values('$name','$email','$phone','$address','$dobf','$bgroup','$ldf','$account_id')");   
+
+            $x= "insert into DONOR(name,email,phone,address,DATE_OF_BIRTH,blood_group,LAST_DONATION,account_id) values('$name','$email','$phone','$address',to_date('".$dob ."','MM/DD/YYYY hh24:mi:ss'),'$bgroup',to_date('".$ld ."','MM/DD/YYYY hh24:mi:ss'),'$account_id')";
+        $query2=oci_parse($conn,$x);   
         $result1 = oci_execute($query2);  
         if($result1){
             echo "Data added successfully!";
