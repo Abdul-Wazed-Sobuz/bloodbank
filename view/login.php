@@ -13,7 +13,7 @@
       BdDoner.com
     </div>
     <div class="wrapper">
-      <form class="form-signin" method="post" action="../controller/authadmin.php">
+      <form class="form-signin" method="post" action="../controller/authadminController.php">
         <h2
           style="margin-bottom: 1rem; padding: 10px, 0px, 15px, 0px"
           class="form-signin-heading"

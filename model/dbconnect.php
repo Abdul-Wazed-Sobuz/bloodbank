@@ -1,3 +1,3 @@
 <?php
-$conn=oci_connect('bbsystem','bank','localhost/xe') or die (oci_error());
+$conn=oci_connect('bbank','blood','localhost/xe') or die (oci_error());
 

@@ -3,8 +3,9 @@
 <?php include '../layouts/admin-nav.php'; ?>
 
 <div class="container my-5">
+  <h4 style="padding: 20px, 0px !important">Create Branch</h4>
 <form>
-  <div class="form-row">
+  <div class="form-row my-3">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
       <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
@@ -20,7 +21,8 @@
   </div>
   <div class="form-group">
     <label for="inputAddress2">Phone</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <input type="number" class="form-control" id="inputAddress2" placeholder="
+    ">
   </div>
   <div class="form-row">
 
@@ -31,7 +33,7 @@
   </div>
   <div class="d-flex">
   <button type="submit" class="btn btn-primary">Create</button>
-  <button type="submit " class="btn btn-primary mx-3">Back</button>
+  <a href="admindash.php"><button class="btn btn-primary mx-3">Back</button></a>
   </div>
 </form>
 </div>
