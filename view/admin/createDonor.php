@@ -4,53 +4,53 @@
 
 <div class="container my-5">
     <h1 style="padding: 20px, 0px !important">Create Donor</h1>
-    <form>
+    <form method="post" action="../../controller/donor.php">
 
         <div class="form-row my-3">
             <div class="form-group col-md-6">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
             </div>
             <div class="form-group col-md-6">
-                <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
             </div>
         </div>
 
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="name" class="form-control" id="name" placeholder="Enter donor name">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter donor name">
         </div>
 
         <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="text" class="form-control" id="phone" placeholder="+88">
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="+88">
         </div>
 
         <div class="form-group">
             <label for="address">Address</label>
-            <input type="txt" class="form-control" id="address" placeholder="Donor address">
+            <input type="txt" class="form-control" id="address" name="address" placeholder="Donor address">
         </div>
 
         <div class="form-row my-3">
             <div class="form-group col-md-6">
                 <label for="dob">Date of Birth</label>
-                <input type="date" class="form-control" id="dob">
+                <input type="date" class="form-control" id="dob" name="dob">
             </div>
 
             <div class="form-group col-md-6">
                 <label for="ld">Last Donation</label>
-                <input type="date" class="form-control" id="ld">
+                <input type="date" class="form-control" id="ld" name="ld">
             </div>
         </div>
 
         <div class="form-group">
             <label for="bgroup">Blood Group</label>
-            <input type="text" class="form-control" id="bgroup">
+            <input type="text" class="form-control" id="bgroup" name="bgroup">
         </div>
 
         <div class="d-flex">
-            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="submit" class="btn btn-primary" name="save" value="submit">Create</button>
             <a href="admindash.php"><button class="btn btn-primary mx-3">Back</button></a>
         </div>
     </form>
