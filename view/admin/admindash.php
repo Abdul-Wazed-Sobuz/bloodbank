@@ -28,8 +28,8 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="../admin/create_branch.php">Create Branch</a>
-                        <a class="dropdown-item" href="#">Create Hospital</a>
-                        <a class="dropdown-item" href="#">Create Doner</a>
+                        <a class="dropdown-item" href="../admin/createhospital.php">Create Hospital</a>
+                        <a class="dropdown-item" href="../admin/createDonor.php">Create Donor</a>
                     </div>
                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Show data</a>
                     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Requests</a>
@@ -42,6 +42,8 @@
                 <?php include '../../controller/showdonorController.php' ?>
                 <h4>Branch List</h4>
                 <?php include '../../controller/showallbranchController.php' ?>
+                <h4>Hospital List</h4>
+                <?php include '../../controller/showallhospitalController.php' ?>
             </div>
         </div>
     </div>
