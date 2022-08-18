@@ -54,7 +54,7 @@
                     <footer class="d-flex justify-content-between
       ">
                         <ul class="d-flex">
-                            <li><a class="" href="#">About</a></li>
+                            <li><a class="pr-3" href="#">About</a></li>
                             <li><a class="pr-3" href="#">Sitemap</a></li>
                             <li><a class="pr-3" href="#">Contact</a></li>
                         </ul>
