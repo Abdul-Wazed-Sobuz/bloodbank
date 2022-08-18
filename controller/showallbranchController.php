@@ -30,6 +30,8 @@ while (($row = oci_fetch_assoc($stid)) != false) {
         <td><?php echo $row['BRANCH_PHONE'];   ?></td>
         <td><?php echo $row['ZIP'];   ?></td>
         <td><?php echo $row['ACCOUNT_ID'];   ?></td>
+        <td><button class="btn btn-primary">Modify</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
     </tr>
     <?php
     

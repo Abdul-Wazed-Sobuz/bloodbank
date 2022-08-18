@@ -1,10 +1,11 @@
+<?php include '../../controller/branchController.php' ?>
 <?php include '../layouts/extlinks/cdn-css.php' ?>
 
 <?php include '../layouts/admin-nav.php'; ?>
 
 <div class="container my-5">
   <h4 style="padding: 20px, 0px !important">Create Branch</h4>
-<form>
+<form method="post" action="">
   <div class="form-row my-3">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
@@ -33,7 +34,7 @@
   </div>
   <div class="d-flex">
   <button type="submit" class="btn btn-primary">Create</button>
-  <a href="admindash.php"><button class="btn btn-primary mx-3">Back</button></a>
+  <button class="btn-primary btn mx-3"><a style="color:white; text-decoration:none;" href="admindash.php">Back</a></button>
   </div>
 </form>
 </div>

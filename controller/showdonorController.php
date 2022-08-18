@@ -29,6 +29,8 @@ while (($row = oci_fetch_assoc($stid)) != false) {
         <td><?php echo $row['ADDRESS'];   ?></td>
         <td><?php echo $row['DATE_OF_BIRTH'];   ?></td>
         <td><?php echo $row['LAST_DONATION'];   ?></td>
+        <td><button class="btn btn-primary">Modify</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
     </tr>
     <?php
     
