@@ -1,49 +1,69 @@
-<?php include '../layouts/extlinks/cdn-css.php'; ?>
-<?php include '../layouts/admin-nav.php' ?>
+<?php include '../layouts/extlinks/cdn-css.php' ?>
+
+<?php include '../layouts/admin-nav.php'; ?>
+
 <?php
-
-$bmail=$_GET['bemail'];
-$badd=$_GET['badd'];
-$bphone=$_GET['bphon'];
-$zip=$_GET['zip'];
-
-
+$email=$_GET['email'];
+$name=$_GET['name'];
+$phone=$_GET['phone'];
+$address=$_GET['address'];
+$bgroup=$_GET['bgroup'];
+$dob=$_GET['dob'];
+$ld=$_GET['ld'];
 ?>
 
 <div class="container my-5">
-  <h4 style="padding: 20px, 0px !important">Update Branch Details</h4>
-<form method="post" action="">
-  <div class="form-row my-3">
-    <div class="form-group">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" value="<?php echo $bmail; ?>" placeholder="Email">
-    </div>
-    <!-- <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-    </div> -->
-  </div>
-  <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" value="<?php echo $badd?>" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Phone</label>
-    <input type="number" value="<?php echo $bphone?>" class="form-control" id="inputAddress2" placeholder="
-    ">
-  </div>
-  <div class="form-row">
+    <h1 style="padding: 20px, 0px !important">Create Donor</h1>
+    <form method="post" action="../../controller/donor.php">
 
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" value="<?php echo $zip?>" class="form-control" id="inputZip">
-    </div>
-  </div>
-  <div class="d-flex">
-  <button type="submit" class="btn btn-primary">Update</button>
-  <button class="btn-primary btn mx-3"><a style="color:white; text-decoration:none;" href="admindash.php">Back</a></button>
-  </div>
-</form>
+        <div class="form-row my-3">
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" value="<?php echo $email; ?>" placeholder="Email">
+            </div>
+            <!-- <div class="form-group col-md-6">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div> -->
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="<?php echo $name; ?>" placeholder="Enter donor name">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="<?php echo $phone; ?>" placeholder="+88">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="txt" class="form-control" id="address" name="address" value="<?php echo $address; ?>" placeholder="Donor address">
+        </div>
+
+        <div class="form-row my-3">
+            <div class="form-group col-md-6">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" value="<?php echo $dob; ?>" name="dob">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="ld">Last Donation</label>
+                <input type="date" class="form-control" id="ld" value="<?php echo $ld ?>" name="ld">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="bgroup">Blood Group</label>
+            <input type="text" class="form-control" id="bgroup" value="<?php echo $bgroup; ?>" name="bgroup">
+        </div>
+
+        <div class="d-flex">
+            <button type="submit" class="btn btn-primary" name="save" value="submit">Update</button>
+            <a href="admindash.php"><button class="btn btn-primary mx-3">Back</button></a>
+        </div>
+    </form>
 </div>
 
 
