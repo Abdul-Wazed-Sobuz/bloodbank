@@ -9,6 +9,7 @@ if(isset($_POST['save']))
     $name=$_POST['name'];
     $phone=$_POST['phone'];
     $address=$_POST['address'];
+    $bgroup=$_POST['bgroup'];
    $dob =  date("m/d/Y",strtotime(@$_POST['dob']));
    $ld =  date("m/d/Y",strtotime(@$_POST['ld']));
 
@@ -29,7 +30,7 @@ if(isset($_POST['save']))
            $account_id=$row['ACCOUNT_ID'];   
             }
 
-            $x= "insert into DONOR(name,email,phone,address,DATE_OF_BIRTH,blood_group,LAST_DONATION,account_id) values('$name','$email','$phone','$address',to_date('".$dob ."','MM/DD/YYYY hh24:mi:ss'),'$bgroup',to_date('".$ld ."','MM/DD/YYYY hh24:mi:ss'),'$account_id')";
+            $x= "insert into DONOR(name,email,phone,address,blood_group,DATE_OF_BIRTH,LAST_DONATION,account_id) values('$name','$email','$phone','$address','bgroup',to_date('".$dob ."','MM/DD/YYYY hh24:mi:ss'),'$bgroup',to_date('".$ld ."','MM/DD/YYYY hh24:mi:ss'),'$account_id')";
         $query2=oci_parse($conn,$x);   
         $result1 = oci_execute($query2);  
         if($result1){

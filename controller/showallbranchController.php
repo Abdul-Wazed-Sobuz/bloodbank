@@ -21,7 +21,7 @@ oci_execute($stid);
     <tbody>
 <?php
 while (($row = oci_fetch_assoc($stid)) != false) {
-    $url="../admin/updatedonor.php?bid=".$row['BRANCH_ID']."&badd=".$row['BRANCH_ADDRESS']."&bemail=".$row['BRANCH_EMAIL']."&bphon=".$row['BRANCH_PHONE']."&zip=".$row['ZIP'];
+    $url="../admin/updatebranch.php?bid=".$row['BRANCH_ID']."&badd=".$row['BRANCH_ADDRESS']."&bemail=".$row['BRANCH_EMAIL']."&bphon=".$row['BRANCH_PHONE']."&zip=".$row['ZIP'];
     ?>
     <tr>
         <th scope="row">
