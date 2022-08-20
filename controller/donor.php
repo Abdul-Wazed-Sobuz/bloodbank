@@ -22,13 +22,13 @@ if(isset($_POST['save']))
 
     if($result){
         
-        $query1="select account_id from account where email='".$_POST['email']."'";
+        $query1="select account_id from account where email='".$email."'";
         $stid = oci_parse($conn, $query1);
         oci_execute($stid);
             while (($row = oci_fetch_assoc($stid)) != false) {
-           $account_id=$row['ACCOUNT_ID'];   
+            $account_id=$row['ACCOUNT_ID'];   
             }
-        $query2=oci_parse($conn,"insert into DONOR(name,email,phone,address,date_of_birth,blood_group,last_donation,account_id) values('$name','$email','$phone','$address','$dobf','$bgroup','$ldf','$account_id')");   
+        $query2=oci_parse($conn,"insert into DONOR(name,phone,address,date_of_birth,blood_group,last_donation,account_id) values('$name','$phone','$address','$dobf','$bgroup','$ldf','$account_id')");   
         $result1 = oci_execute($query2);  
         if($result1){
             echo "Data added successfully!";
