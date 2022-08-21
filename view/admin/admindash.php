@@ -1,3 +1,7 @@
+<?php include_once '../../controller/countdonor.php' ?>
+<?php include_once '../../controller/counthospital.php' ?>
+<?php include_once '../../controller/countbranch.php' ?>
+<?php include_once '../../controller/countaccount.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include '../layouts/extlinks/cdn-css.php'; ?>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>bdDoner.com | Admin</title>
 </head>
 <style>
@@ -14,11 +19,24 @@
         margin: 0px;
         background-color: whitesmoke !important;
     }
+
+    i {
+        color: #B31B1B;
+    }
+
+    .card-body {
+        background-color: #F08080;
+        
+        
+
+    }
+    .card, .card-body{
+        border-radius: 15px;
+    }
 </style>
 
 <body>
     <?php include '../layouts/admin-nav.php'; ?>
-
     <div class="container-fluid">
         <div class="row" style="min-height: 1000px;">
             <div class="col-2">
@@ -38,6 +56,60 @@
             </div>
 
             <div class="col-10">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Account</h5>
+                                    <div style="display:flex ; justify-content:space-between">
+                                        <p class="card-text" style="font-size:larger">Total Count <?php echo $tacc; ?></p>
+                                        <div><i style="font-size: 28pt;" class="fa-solid fa-user-large"></i></div>
+                                    </div>
+
+                                    <a href="#" class="btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Donor</h5>
+                                    <div style="display:flex ; justify-content:space-between">
+                                        <p class="card-text" style="font-size:larger">Total Count <?php echo $tdonor; ?></p>
+                                        <div><i style="font-size: 28pt;" class="fa-solid fa-hand-holding-droplet"></i></div>
+                                    </div>
+
+                                    <a href="#" class="btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hospital</h5>
+                                    <div style="display:flex ; justify-content:space-between">
+                                        <p class="card-text" style="font-size:larger">Total Count <?php echo $thospital; ?></p>
+                                        <div><i style="font-size: 28pt;" class="fa-solid fa-hospital-user"></i></div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Branch</h5>
+                                    <div style="display:flex ; justify-content:space-between">
+                                        <p class="card-text" style="font-size:larger">Total Count <?php echo $tbranch; ?></p>
+                                        <div><i style="font-size: 28pt;" class="fa-solid fa-code-branch"></i></div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <h4>Donor List</h4>
                 <?php include '../../controller/showdonorController.php' ?>
                 <h4>Branch List</h4>
@@ -48,9 +120,9 @@
         </div>
     </div>
     <div class="container-fluid w-75">
-    <div class="row">
+        <div class="row">
             <div class="col-12">
-            <section>
+                <section>
                     <footer class="d-flex justify-content-between
       ">
                         <ul class="d-flex">
