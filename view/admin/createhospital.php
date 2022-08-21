@@ -4,7 +4,7 @@
 
 <div class="container my-5">
     <h1 style="padding: 20px, 0px !important">Create Hospital</h1>
-    <form method="post" action="../../controller/process.php">
+    <form method="post" action="../../controller/hospitalprocess.php">
 
         <div class="form-row my-3">
             <div class="form-group col-md-6">
