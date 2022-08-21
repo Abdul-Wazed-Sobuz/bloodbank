@@ -33,7 +33,7 @@ while (($row = oci_fetch_assoc($stid)) != false) {
         <td><?php echo $row['ACCOUNT_ID'];   ?></td>
         <!-- <td><button class="btn btn-primary"></button></td> -->
         <td><button class="btn btn-primary"><a  style="color:white; text-decoration:none;" href="<?php echo $url; ?>">Modify</a></button></td>
-        <td><button class="btn btn-danger">Delete</button></td>
+        <td><button class="btn btn-danger"><a style="color:white; text-decoration:none;" href="../../controller/branchDelete.php?bid=<?php echo $row["BRANCH_ID"]; ?>">Delete</a></button></td>
     </tr>
     <?php
     
