@@ -21,11 +21,12 @@
     }
 
     i {
-        color: #B31B1B;
+        color: #F40009;
     }
 
     .card-body {
-        background-color: #F08080;
+        background-color: #FEBE10;
+        
         
         
 
@@ -67,7 +68,7 @@
                                         <div><i style="font-size: 28pt;" class="fa-solid fa-user-large"></i></div>
                                     </div>
 
-                                    <a href="#" class="btn btn-primary">View</a>
+                                    <a href="#" class="btn btn-dark">View</a>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +81,7 @@
                                         <div><i style="font-size: 28pt;" class="fa-solid fa-hand-holding-droplet"></i></div>
                                     </div>
 
-                                    <a href="#" class="btn btn-primary">View</a>
+                                    <a href="#" class="btn btn-dark">View</a>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +93,7 @@
                                         <p class="card-text" style="font-size:larger">Total Count <?php echo $thospital; ?></p>
                                         <div><i style="font-size: 28pt;" class="fa-solid fa-hospital-user"></i></div>
                                     </div>
-                                    <a href="#" class="btn btn-primary">View</a>
+                                    <a href="#" class="btn btn-dark">View</a>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +105,7 @@
                                         <p class="card-text" style="font-size:larger">Total Count <?php echo $tbranch; ?></p>
                                         <div><i style="font-size: 28pt;" class="fa-solid fa-code-branch"></i></div>
                                     </div>
-                                    <a href="#" class="btn btn-primary">View</a>
+                                    <a href="#" class="btn btn-dark">View</a>
                                 </div>
                             </div>
                         </div>

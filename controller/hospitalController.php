@@ -21,7 +21,7 @@ if(isset($_POST['save']))
             while (($row = oci_fetch_assoc($stid)) != false) {
            $account_id=$row['ACCOUNT_ID'];   
             }
-        $query2=oci_parse($conn,"insert into HOSPITAL(hospital_name,hospital_address,hospital_phone,hospital_email,account_id) values('$hospital_name','$hospital_phone','$hospital_address','$email','$account_id')");   
+        $query2=oci_parse($conn,"insert into HOSPITAL(hospital_name,hospital_phone,hospital_address,hospital_email,account_id) values('$hospital_name','$hospital_phone','$hospital_address','$email','$account_id')");   
         $result1 = oci_execute($query2); 
         if($result1){
             // echo "Data added successfully!";
