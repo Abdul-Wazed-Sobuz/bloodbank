@@ -21,12 +21,12 @@ oci_execute($stid);
     </thead>
     <tbody>
 <?php
+
 while (($row = oci_fetch_assoc($stid)) != false) {
-    $bg = $row['BLOOD_GROUP'];
-   
-    $url="../admin/updatedonor.php?did=".$row['DONOR_ID']."&name=".$row['NAME']."&email="."&phone=".$row['PHONE']."&address=".$row['ADDRESS']."&bgroup=".$bg."&dob=".$row['DATE_OF_BIRTH']."&ld=".$row['LAST_DONATION'];
+    $url="../admin/updatedonor.php?did=".$row['DONOR_ID']."&name=".$row['NAME']."&phone=".$row['PHONE']."&address=".$row['ADDRESS']."&bgroup=".$row['BLOOD_GROUP']."&dob=".$row['DATE_OF_BIRTH']."&ld=".$row['LAST_DONATION'];
+
+    $durl="../admin/deletdonor.php?did=".$row['DONOR_ID']."&name=".$row['NAME']."&phone=".$row['PHONE']."&address=".$row['ADDRESS']."&bgroup=".$row['BLOOD_GROUP']."&dob=".$row['DATE_OF_BIRTH']."&ld=".$row['LAST_DONATION'];
     ?>
-    
     <tr>
         <th scope="row"><?php echo $row['DONOR_ID'];   ?></td>
         <td><?php echo $row['NAME'];   ?></td>
@@ -36,9 +36,10 @@ while (($row = oci_fetch_assoc($stid)) != false) {
         <td><?php echo $row['DATE_OF_BIRTH'];   ?></td>
         <td><?php echo $row['LAST_DONATION'];   ?></td>
         <td><button class="btn btn-primary"><a  style="color:white; text-decoration:none;" href="<?php echo $url; ?>">Modify</a></button></td>
-        <td><button class="btn btn-danger">Delete</button></td>
+        <td><button class="btn btn-danger"><a style="color:white; text-decoration:none;" href="../../controller/donorDelete.php?did=<?php echo $row["DONOR_ID"]; ?>">Delete</a></button></td>
     </tr>
     <?php
+    
     
 }
 ?>

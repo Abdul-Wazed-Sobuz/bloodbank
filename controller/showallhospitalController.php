@@ -21,6 +21,7 @@ oci_execute($stid);
     <tbody>
 <?php
 while (($row = oci_fetch_assoc($stid)) != false) {
+    $url="../admin/updatehospital.php?hid=".$row['HOSPITAL_ID']."&hname=".$row['HOSPITAL_NAME']."&hemail=".$row['HOSPITAL_EMAIL']."&hphone=".$row['HOSPITAL_PHONE']."&haddress=".$row['HOSPITAL_ADDRESS'];
     ?>
     <tr>
         <th scope="row">
@@ -30,6 +31,8 @@ while (($row = oci_fetch_assoc($stid)) != false) {
         <td><?php echo $row['HOSPITAL_PHONE'];   ?></td>
         <td><?php echo $row['HOSPITAL_ADDRESS'];   ?></td>
         <td><?php echo $row['ACCOUNT_ID'];   ?></td>
+        <td><button class="btn btn-primary"><a  style="color:white; text-decoration:none;" href="<?php echo $url; ?>">Modify</a></button></td>
+        <td><button class="btn btn-danger"><a style="color:white; text-decoration:none;" href="../../controller/hospitalDelete.php?hid=<?php echo $row["HOSPITAL_ID"]; ?>">Delete</a></button></td>
     </tr>
     <?php
     

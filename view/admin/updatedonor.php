@@ -3,29 +3,18 @@
 <?php include '../layouts/admin-nav.php'; ?>
 
 <?php
-$email=$_GET['email'];
 $name=$_GET['name'];
 $phone=$_GET['phone'];
 $address=$_GET['address'];
 $bgroup=$_GET['bgroup'];
-$dob=$_GET['dob'];
-$ld=$_GET['ld'];
+$dob=date("m/d/Y",strtotime(@$_GET['dob']));
+$ld=date("m/d/Y",strtotime(@$_GET['ld']));
 ?>
 
-<div class="container my-5">
-    <h1 style="padding: 20px, 0px !important">Create Donor</h1>
-    <form method="post" action="../../controller/donor.php">
 
-        <div class="form-row my-3">
-            <div class="form-group col-md-6">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" value="<?php echo $email; ?>" placeholder="Email">
-            </div>
-            <!-- <div class="form-group col-md-6">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-            </div> -->
-        </div>
+<div class="container my-5">
+    <h1 style="padding: 20px, 0px !important">Update Donor</h1>
+    <form method="post" action="../../controller/donor.php">
 
         <div class="form-group">
             <label for="name">Name</label>
@@ -42,6 +31,11 @@ $ld=$_GET['ld'];
             <input type="txt" class="form-control" id="address" name="address" value="<?php echo $address; ?>" placeholder="Donor address">
         </div>
 
+        <div class="form-group">
+            <label for="bgroup">Blood Group</label>
+            <input type="text" class="form-control" id="bgroup" value="<?php echo $bgroup; ?>" name="bgroup">
+        </div>
+
         <div class="form-row my-3">
             <div class="form-group col-md-6">
                 <label for="dob">Date of Birth</label>
@@ -54,10 +48,7 @@ $ld=$_GET['ld'];
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="bgroup">Blood Group</label>
-            <input type="text" class="form-control" id="bgroup" value="<?php echo $bgroup; ?>" name="bgroup">
-        </div>
+        
 
         <div class="d-flex">
             <button type="submit" class="btn btn-primary" name="save" value="submit">Update</button>
