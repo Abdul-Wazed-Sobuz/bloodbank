@@ -24,8 +24,8 @@ while (($row = oci_fetch_assoc($stid)) != false) {
         <td><?php echo $row['BLOOD_GROUP'];   ?></td>
         <td><?php echo $row['PHONE'];   ?></td>
         <td><?php echo $row['ADDRESS'];   ?></td>
-        <td><?php echo $row['ACCOUNT_ID'];   ?></td>
         <td><?php echo $row['REQUEST_DATE'];   ?></td>
+        <td><?php echo $row['ACCOUNT_ID'];   ?></td>
         <td><button class="btn btn-danger"><a style="color:white; text-decoration:none;" href="../../controller/requestDelete.php?rid=<?php echo $row["REQUEST_ID"]; ?>">Delete</a></button></td>
     </tr>
     <?php 
