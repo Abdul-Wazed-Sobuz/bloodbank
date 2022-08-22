@@ -24,21 +24,9 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid w-75">
-            <div class="row">
-                <div class="col-12">
-                    <section>
-                        <footer class="d-flex justify-content-between
-      ">
-                            <ul class="d-flex">
-                                <li><a class="pr-3" href="#">About</a></li>
-                                <li><a class="pr-3" href="#">Sitemap</a></li>
-                                <li><a class="pr-3" href="#">Contact</a></li>
-                            </ul>
-                            <p class="mr-5">&copy; arcadian software system inc.</p>
-                        </footer>
-                    </section>
-                </div>
+        <div>
+            <div>
+                <?php include '../layouts/footer.php' ?>
             </div>
         </div>
         <?php include '../layouts/extlinks/cdn-js.php'; ?>

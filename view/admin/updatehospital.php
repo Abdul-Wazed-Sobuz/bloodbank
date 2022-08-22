@@ -2,7 +2,7 @@
 
 <?php include '../layouts/admin-nav.php'; ?>
 <!-- <?php include '../../controller/hospitalProcess.php'?> -->
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <?php
 $hid=$_GET['hid'];
 $hname=$_GET['hname'];
@@ -11,7 +11,7 @@ $hphone=$_GET['hphone'];
 $haddress=$_GET['haddress'];
 ?>
 
-<div class="container my-5">
+<div class="container my-5" style="min-height: 450px;">
     <h1 style="padding: 20px, 0px !important">Update Hospital</h1>
     <form method="post" action='../../controller/hospitalProcess.php?hid=<?php echo $hid;?>'>
         <div class="form-group">
@@ -48,7 +48,9 @@ $haddress=$_GET['haddress'];
     </form>
 </div>
 
-
+<div>
+  <?php include '../layouts/footer.php' ?>
+</div>
 
 
 

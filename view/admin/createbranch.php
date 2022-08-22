@@ -1,8 +1,8 @@
 <?php include '../layouts/extlinks/cdn-css.php' ?>
 
 <?php include '../layouts/admin-nav.php'; ?>
-
-<div class="container my-5">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="container my-5" style="min-height: 450px;">
   <h4 style="padding: 20px, 0px !important">Create Branch</h4>
 <form method="post" action="../../controller/branchController.php">
   <div class="form-row my-3">
@@ -36,6 +36,9 @@
   <button class="btn-primary btn mx-3"><a style="color:white; text-decoration:none;" href="admindash.php">Back</a></button>
   </div>
 </form>
+</div>
+<div>
+  <?php include '../layouts/footer.php' ?>
 </div>
 
 
