@@ -1,5 +1,5 @@
 <?php session_start() ?>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav style="background-color:#89CFF0;" class="navbar navbar-expand-lg">
   <a style="color:red;font-size:2rem;" class="navbar-brand" href="../admin/admindash.php">BdDoner.com</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

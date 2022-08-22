@@ -38,7 +38,7 @@
 <body>
     <?php include '../layouts/admin-nav.php'; ?>
     <div class="container-fluid">
-        <div class="row" style="min-height: 1000px;">
+        <div class="row" style="min-height: 540px;">
             <div class="col-2 sidebar">
             <?php include '../layouts/sidebar.php' ?>
             
@@ -102,16 +102,17 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid w-75">
+
+    <div style="background-color: #FBCEB1;" class="container-fluid p-3">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 w-75">
                 <section>
                     <footer class="d-flex justify-content-between
       ">
                         <ul class="d-flex">
-                            <li><a class="pr-3" href="#">About</a></li>
-                            <li><a class="pr-3" href="#">Sitemap</a></li>
-                            <li><a class="pr-3" href="#">Contact</a></li>
+                            <li><a style="color:black" class="pr-3" href="#">About</a></li>
+                            <li><a style="color:black" class="pr-3" href="#">Sitemap</a></li>
+                            <li><a style="color:black" class="pr-3" href="#">Contact</a></li>
                         </ul>
                         <p class="mr-5">&copy; arcadian software system inc.</p>
                     </footer>
@@ -119,6 +120,7 @@
             </div>
         </div>
     </div>
+    
     <?php include '../layouts/extlinks/cdn-js.php'; ?>
 
 </body>
