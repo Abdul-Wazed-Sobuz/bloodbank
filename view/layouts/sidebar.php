@@ -23,6 +23,6 @@
 
     <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i style="color:red;font-size:16pt" class="fa-solid fa-hand-holding-medical p-2"></i>Request</a>
 
-    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i style="color:red;font-size:16pt" class="fa-solid fa-magnifying-glass p-2"></i>Search Blood</a>
+    <a class="nav-link" id="v-pills-settings-tab"  href="../admin/bloodsearch.php"><i style="color:red;font-size:16pt" class="fa-solid fa-magnifying-glass p-2"></i>Search Blood</a>
 </div>
 </div>
