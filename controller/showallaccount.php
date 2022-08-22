@@ -1,7 +1,7 @@
 <?php
 $conn=oci_connect('bbank','blood','localhost/xe') or die (oci_error());
 
-$query = "select * from account";
+$query = "select * from account order by ACCOUNT_ID";
 $stid = oci_parse($conn, $query);
 oci_execute($stid);
 

@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  background: #eee !important;
+  /* background: #eee !important; */
 }
 
 .wrapper {
@@ -66,4 +66,9 @@ footer li{
 .sidebar{
   background-color: #E6E8E6;
 }
-
+.sidenav a{
+  display: block;
+}
+.sidenav :hover{
+  background-color: rgb(1, 0, 0);
+}

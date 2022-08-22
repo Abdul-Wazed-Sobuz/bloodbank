@@ -33,7 +33,7 @@
                     <script>
                         $(document).ready(function(){
                             $.ajax({
-                                        url:"../../controller/showdonorController.php",
+                                        url:"../../controller/showdonoronsearch.php",
                                         method: "get",
                                         success:function(data){
                                             $("#searchresult").html(data)
