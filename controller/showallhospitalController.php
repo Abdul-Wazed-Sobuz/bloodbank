@@ -1,7 +1,7 @@
 <?php
 $conn=oci_connect('bbank','blood','localhost/xe') or die (oci_error());
 
-$query = "select * from hospital";
+$query = "select * from hospital ORDER BY HOSPITAL_ID";
 $stid = oci_parse($conn, $query);
 oci_execute($stid);
 
