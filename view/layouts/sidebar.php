@@ -4,7 +4,7 @@
         Create Users
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="../admin/create_branch.php">Create Branch</a>
+        <a class="dropdown-item" href="../admin/createbranch.php">Create Branch</a>
         <a class="dropdown-item" href="../admin/createhospital.php">Create Hospital</a>
         <a class="dropdown-item" href="../admin/createDonor.php">Create Donor</a>
     </div> -->
@@ -13,7 +13,7 @@
     Create Account user      
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="../admin/createbranch.php">Create Branch</a>
+        <a  class="dropdown-item" href="../admin/createbranch.php">Create Branch</a>
         <a class="dropdown-item" href="../admin/createhospital.php">Create Hospital</a>
         <a class="dropdown-item" href="../admin/createDonor.php">Create Donor</a>
   </div>

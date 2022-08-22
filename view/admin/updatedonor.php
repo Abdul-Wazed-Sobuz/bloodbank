@@ -3,18 +3,21 @@
 <?php include '../layouts/admin-nav.php'; ?>
 
 <?php
+$did=$_GET['did'];
 $name=$_GET['name'];
 $phone=$_GET['phone'];
 $address=$_GET['address'];
 $bgroup=$_GET['bgroup'];
 $dob=date("m/d/Y",strtotime(@$_GET['dob']));
 $ld=date("m/d/Y",strtotime(@$_GET['ld']));
+//echo $did;
 ?>
 
 
 <div class="container my-5">
     <h1 style="padding: 20px, 0px !important">Update Donor</h1>
-    <form method="post" action="../../controller/donor.php">
+    <!-- <form method="post" action="../../controller/donor.php"> -->
+    <form method="post" action='../../controller/donorProcess.php?did=<?php echo $did;?>'>
 
         <div class="form-group">
             <label for="name">Name</label>
@@ -51,8 +54,8 @@ $ld=date("m/d/Y",strtotime(@$_GET['ld']));
         
 
         <div class="d-flex">
-            <button type="submit" class="btn btn-primary" name="save" value="submit">Update</button>
-            <button class="btn btn-primary mx-3"><a style="text-decoration: none;color:white" href="admindash.php">Back</a></button>
+        <button type="submit"  name="btn-submit" class="btn btn-primary">Update</button>
+            <a href="admindash.php"><button class="btn btn-primary mx-3">Back</button></a>
         </div>
     </form>
 </div>

@@ -41,4 +41,3 @@ if(isset($_POST['save']))
         echo "something wrong";
         exit();
     }
-?>

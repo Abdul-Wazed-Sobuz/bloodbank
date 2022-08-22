@@ -49,7 +49,7 @@
 
                 <div class="col-10">
                     <div>
-                        <h4 class="p-3"><i class="fa-solid fa-chart-simple"></i> Current Statistics</h4>
+                        <h4 class="p-3" style="color: black;"><i style="color:red" class="fa-solid fa-chart-simple"></i> Current Statistics</h4>
                         <div class="row">
                             <div class="col-sm-3">
                                 <div class="card">
@@ -110,9 +110,9 @@
                         
                         <script>
                             
-                            var xValues = ["AB+", "AB-", "O+", "O-", "A+"];
-                            var yValues = [55, 49, 44, 24, 15];
-                            var barColors = ["red", "green", "blue", "orange", "brown"];
+                            var xValues = ["AB+", "AB-", "O+", "O-", "A+","B+"];
+                            var yValues = [12, 15, 9, 10,10,13,1 ];
+                            var barColors = ["#CD4631", "#DEA47E", "#81ADC8", "orange", "#ACACDE","#B8336A"];
 
                             new Chart("myChart", {
                                 type: "bar",
