@@ -51,7 +51,7 @@
 
         <div class="d-flex">
             <button type="submit" class="btn btn-primary" name="save" value="submit">Create</button>
-            <a href="admindash.php"><button class="btn btn-primary mx-3">Back</button></a>
+            <button class="btn btn-primary mx-3"><a style="text-decoration: none;color:white" href="admindash.php">Back</a></button>
         </div>
     </form>
 </div>

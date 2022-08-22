@@ -14,12 +14,12 @@
 <body>
     <?php include '../layouts/admin-nav.php'; ?>
     <div class="container-fluid">
-        <div class="row" style="min-height: 1000px;">
+        <div class="row" style="min-height: 550px;">
             <div class="col-2">
                 <?php include '../layouts/sidebar.php' ?>
                 <div class="col-10">
 
-                    <h4>Branch List</h4>
+                    <h4 style="background-color: #3891A6;color:white" class="p-3 my-3"><i style="font-size: 16pt;margin-right:10px" class="fa-solid fa-code-branch"></i>Branch List</h4>
                     <?php include '../../controller/showallbranchController.php' ?>
                 </div>
             </div>

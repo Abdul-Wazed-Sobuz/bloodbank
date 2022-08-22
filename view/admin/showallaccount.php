@@ -14,13 +14,13 @@
 <body>
     <?php include '../layouts/admin-nav.php'; ?>
     <div class="container-fluid">
-        <div class="row" style="min-height: 1000px;">
+        <div class="row" style="min-height: 550px;">
             <div class="col-2">
                 <?php include '../layouts/sidebar.php' ?>
                 <div class="col-10">
 
-                    <h4>Account List</h4>
-                    <?php include '../../controller/showallbranchController.php' ?>
+                    <h4 style="background-color: #372549;color:white" class="p-3 my-3"><i style="font-size: 16pt;margin-right:10px" class="fa-solid fa-user-large"></i>Account List</h4>
+                    <?php include '../../controller/showallaccount.php' ?>
                 </div>
             </div>
         </div>
