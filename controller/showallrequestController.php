@@ -5,8 +5,6 @@ $query = "select * from request ORDER BY REQUEST_ID";
 $stid = oci_parse($conn, $query);
 oci_execute($stid);
 ?>
-
-
 <table class="table table-hover">
     <thead>
         <th scope="col">REQUEST ID</th>
@@ -28,10 +26,9 @@ while (($row = oci_fetch_assoc($stid)) != false) {
         <td><?php echo $row['ADDRESS'];   ?></td>
         <td><?php echo $row['ACCOUNT_ID'];   ?></td>
         <td><?php echo $row['REQUEST_DATE'];   ?></td>
-        <td><button class="btn btn-danger"><a style="color:white; text-decoration:none;" href="../../controller/requestDelete.php?rid=<?php echo $row["REQUEST_ID"]; ?>">Delete</a></button></td> -->
+        <td><button class="btn btn-danger"><a style="color:white; text-decoration:none;" href="../../controller/requestDelete.php?rid=<?php echo $row["REQUEST_ID"]; ?>">Delete</a></button></td>
     </tr>
-    <?php
-    
+    <?php 
 }
 ?>
 </tbody>
