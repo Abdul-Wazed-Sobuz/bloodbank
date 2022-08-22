@@ -11,7 +11,7 @@ $haddress=$_GET['haddress'];
 
 <div class="container my-5">
     <h1 style="padding: 20px, 0px !important">Update Hospital</h1>
-    <form method="post" action="../../controller/process.php">
+    <form method="post" action="../../controller/hospitalController.php">
 
         
             <div class="form-group">
