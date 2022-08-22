@@ -1,6 +1,6 @@
 <?php session_start() ?>
 <nav style="background-color:#1A1423;" class="navbar navbar-expand-lg">
-  <a style="color:red;font-size:2rem;" class="navbar-brand" href="../admin/admindash.php">BdDoner.com</a>
+  <a style="color:red;font-size:1.5rem;" class="navbar-brand" href="../admin/admindash.php"><i style="padding:0px 5px ;color:red" class="fa-solid fa-droplet"></i>BdDoner.com</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
