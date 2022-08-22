@@ -40,24 +40,12 @@
     <?php include '../layouts/admin-nav.php'; ?>
     <div class="container-fluid">
         <div class="row" style="min-height: 1000px;">
-            <div class="col-2">
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Create Users
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="../admin/create_branch.php">Create Branch</a>
-                        <a class="dropdown-item" href="../admin/createhospital.php">Create Hospital</a>
-                        <a class="dropdown-item" href="../admin/createDonor.php">Create Donor</a>
-                    </div>
-                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Show data</a>
-                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Requests</a>
-                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Profile</a>
-                </div>
-            </div>
-
+            <div class="col-2 sidebar">
+            <?php include '../layouts/sidebar.php' ?>
+            
             <div class="col-10">
-                <div>
+                <div >
+                <h4 class="p-3"><i class="fa-solid fa-chart-simple"></i> Current Statistics</h4>
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="card">
@@ -81,7 +69,8 @@
                                         <div><i style="font-size: 28pt;" class="fa-solid fa-hand-holding-droplet"></i></div>
                                     </div>
 
-                                    <a href="#" class="btn btn-dark">View</a>
+
+                                    <a href="../admin/showalldonor.php" class="btn btn-primary">View</a>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +82,8 @@
                                         <p class="card-text" style="font-size:larger">Total Count <?php echo $thospital; ?></p>
                                         <div><i style="font-size: 28pt;" class="fa-solid fa-hospital-user"></i></div>
                                     </div>
-                                    <a href="#" class="btn btn-dark">View</a>
+
+                                    <a href="../admin/showallhospital.php" class="btn btn-primary">View</a>
                                 </div>
                             </div>
                         </div>
@@ -105,18 +95,13 @@
                                         <p class="card-text" style="font-size:larger">Total Count <?php echo $tbranch; ?></p>
                                         <div><i style="font-size: 28pt;" class="fa-solid fa-code-branch"></i></div>
                                     </div>
-                                    <a href="#" class="btn btn-dark">View</a>
+                                    <a href="../admin/showallbranch.php" class="btn btn-primary">View</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <h4>Donor List</h4>
-                <?php include '../../controller/showdonorController.php' ?>
-                <h4>Branch List</h4>
-                <?php include '../../controller/showallbranchController.php' ?>
-                <h4>Hospital List</h4>
-                <?php include '../../controller/showallhospitalController.php' ?>
+
             </div>
         </div>
     </div>

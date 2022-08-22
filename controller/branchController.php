@@ -1,19 +1,45 @@
-<?php
-$conn=oci_connect('bbank','blood','localhost/xe') or die (oci_error());
+<?php 
+//session_start();
+include_once '../model/dbconnect.php';
 
 
+if(isset($_POST['save']))
+{
+    $email= $_POST['email'];
+    $password= $_POST['password'];
+    $branch_address=$_POST['branch_address'];
+    $branch_phone=$_POST['branch_phone'];
+    $zip=$_POST['zip'];
+    
 
-// Before running, create the table:
-//   CREATE TABLE MYTABLE (col1 NUMBER);
+    $query=oci_parse($conn,"insert into ACCOUNT(email,password,type) values('$email','$password',2)");
+    $result = oci_execute($query);
 
-// $conn = oci_connect('hr', 'welcome', 'localhost/XE');
+    if($result){
+        
+        $query1="select account_id from account where email='".$_POST['email']."'";
+        $stid = oci_parse($conn, $query1);
+        oci_execute($stid);
+            while (($row = oci_fetch_assoc($stid)) != false) {
+           $account_id=$row['ACCOUNT_ID'];   
+            }
 
-$stid = oci_parse($conn, 'INSERT INTO mytab (col1) VALUES (123)');
-// oci_execute($stid, OCI_NO_AUTO_COMMIT);  // data not committed
-$query = "INSERT INTO account (name,email,password,u_role,phone) VALUES ('" . $uname . "','" . $email . "','" . $upass . "','" . $uroll . "','" . $phone . "')";
+            $query2=oci_parse($conn,"insert into BRANCH(branch_address,branch_email,branch_phone,zip,account_id) values('$branch_address','$email','$branch_phone','$zip','$account_id')");  
+        $result1 = oci_execute($query2);  
+        if($result1){
+            echo "Data added successfully!";
+            header('location:../view/admin/admindash.php');
+            
+        }
+        }else{
 
-
-
-
-$stid = oci_parse($conn, 'INSERT INTO account VALUES ()');
-oci_execute($stid);  // commits both 123 and 456 values
+            echo "Error!";
+            exit();
+        }
+        
+    }
+    else{
+        echo "something wrong";
+        exit();
+    }
+?>

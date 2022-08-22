@@ -4,7 +4,7 @@
 
 <div class="container my-5">
     <h1 style="padding: 20px, 0px !important">Create Hospital</h1>
-    <form method="post" action="../../controller/.php">
+    <form method="post" action="../../controller/hospitalProcess.php">
 
         <div class="form-row my-3">
             <div class="form-group col-md-6">
@@ -35,7 +35,7 @@
 
         <div class="d-flex">
             <button type="submit" class="btn btn-primary" name="save" value="submit">Create</button>
-            <a href="admindash.php"><button class="btn btn-primary mx-3">Back</button></a>
+            <button class="btn-primary btn mx-3"><a style="color:white; text-decoration:none;" href="admindash.php">Back</a></button>
         </div>
     </form>
 </div>

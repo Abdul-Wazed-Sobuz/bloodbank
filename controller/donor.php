@@ -30,8 +30,7 @@ if(isset($_POST['save']))
            $account_id=$row['ACCOUNT_ID'];   
             }
 
-            $x= "insert into DONOR(name,email,phone,address,blood_group,DATE_OF_BIRTH,LAST_DONATION,account_id) values('$name','$email','$phone','$address','bgroup',to_date('".$dob ."','MM/DD/YYYY hh24:mi:ss'),'$bgroup',to_date('".$ld ."','MM/DD/YYYY hh24:mi:ss'),'$account_id')";
-        $query2=oci_parse($conn,$x);   
+            $query2=oci_parse($conn,"insert into DONOR(name,phone,address,DATE_OF_BIRTH,blood_group,LAST_DONATION,account_id) values('$name','$phone','$address',to_date('".$dob ."','MM/DD/YYYY hh24:mi:ss'),'$bgroup',to_date('".$ld ."','MM/DD/YYYY hh24:mi:ss'),'$account_id')");  
         $result1 = oci_execute($query2);  
         if($result1){
             echo "Data added successfully!";

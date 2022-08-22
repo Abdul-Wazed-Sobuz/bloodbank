@@ -7,8 +7,8 @@ if(isset($_POST['btn-submit'])){
     $hphone=$_POST['hphone'];
     $hadd= $_POST['haddress'];
     $hid=$_GET['hid'];
-    echo $hid;
-    $query = oci_parse($conn,"UPDATE hospital SET HOSPITAL_EMAIL='" . $hmail ."', HOSPITAL_NAME='" . $hname ."',HOSPITAL_PHONE='" . $hphone ."', HOSPITAL_ADDRESS='" . $hadd ."' WHERE HOSPITAL_ID='" . $hid ."'");
+    //echo $hid;
+    $query = oci_parse($conn,"UPDATE HOSPITAL SET HOSPITAL_EMAIL='" . $hmail ."', HOSPITAL_NAME='" . $hname ."',HOSPITAL_PHONE='" . $hphone ."', HOSPITAL_ADDRESS='" . $hadd ."' WHERE HOSPITAL_ID='" . $hid ."'");
 
     $result=oci_execute($query, OCI_DEFAULT);
     if($result)
