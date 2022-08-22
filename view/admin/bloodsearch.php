@@ -20,15 +20,61 @@
                 <div class="col-10">
                     <nav class="navbar navbar-light bg-light justify-content-between p-3 my-3">
                         <a class="navbar-brand"><h4 style="color:red"><i style="font-size: 16pt;margin-right:10px" class="fa-solid fa-magnifying-glass"></i>Search Blood</h4></a>
-                        <form class="form-inline">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+                        <form class="form-inline" >
+                            <input name="input" class="form-control mr-sm-2" id="bsearch" type="search" placeholder="Search" aria-label="Search">
+                            <button id="btn-bsearch" class="btn btn-outline-danger my-2 my-sm-0">Search</button>
                         </form>
                     </nav>
-                    <!-- <h4 style="background-color: red;color:white" class="p-3 my-3"><i style="font-size: 16pt;margin-right:10px" class="fa-solid fa-magnifying-glass"></i>Search Blood</h4>
-                    <form action="" method="post"> -->
-
                     </form>
+                    <div id="searchresult">
+
+                    </div>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                    <script>
+                        $(document).ready(function(){
+                            $.ajax({
+                                        url:"../../controller/showdonorController.php",
+                                        method: "get",
+                                        success:function(data){
+                                            $("#searchresult").html(data)
+                                        }
+                                    })
+                            $("#btn-bsearch").keydown(function(){
+                                var input = $('input').val();
+                                // alert(input);
+                                if(input!=" "){
+                                    $.ajax({
+                                        url:"../../controller/bloodlivesearch.php",
+                                        method: "post",
+                                        data:{input:input},
+                                        success:function(data){
+                                            $("#searchresult").html(data)
+                                        }
+                                    })
+                                }
+                                else{
+                                    $('#searchresult').css('display','none');
+                                }
+                            })
+                            $("#bsearch").keyup(function(){
+                                var input = $(this).val();
+                                // alert(input);
+                                if(input!=" "){
+                                    $.ajax({
+                                        url:"../../controller/bloodlivesearch.php",
+                                        method: "post",
+                                        data:{input:input},
+                                        success:function(data){
+                                            $("#searchresult").html(data)
+                                        }
+                                    })
+                                }
+                                else{
+                                    $('#searchresult').css('display','none');
+                                }
+                            })
+                        })
+                    </script>
 
                 </div>
             </div>
