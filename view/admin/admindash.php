@@ -2,6 +2,7 @@
 <?php include_once '../../controller/counthospital.php' ?>
 <?php include_once '../../controller/countbranch.php' ?>
 <?php include_once '../../controller/countaccount.php' ?>
+<?php include '../../controller/bloodstats.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +44,7 @@
 <body>
     <?php include '../layouts/admin-nav.php'; ?>
     <div class="container-fluid">
-        <div class="row" style="min-height: 560px;">
+        <div class="row" style="min-height: 590px;">
             <div class="col-2 sidebar">
                 <?php include '../layouts/sidebar.php' ?>
 
@@ -56,7 +57,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Account</h5>
                                         <div style="display:flex ; justify-content:space-between">
-                                            <p class="card-text" style="font-size:larger">Total Count <?php echo $tacc; ?></p>
+                                            <p class="card-text" style="font-size:larger">Total Count <span style="font-size: 18pt;"><?php echo $tacc; ?></span></p>
                                             <div><i style="font-size: 28pt;" class="fa-solid fa-user-large"></i></div>
                                         </div>
 
@@ -69,7 +70,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Donor</h5>
                                         <div style="display:flex ; justify-content:space-between">
-                                            <p class="card-text" style="font-size:larger">Total Count <?php echo $tdonor; ?></p>
+                                            <p class="card-text" style="font-size:larger">Total count <span style="font-size: 18pt;"><?php echo $tdonor; ?></span></p>
                                             <div><i style="font-size: 28pt;" class="fa-solid fa-hand-holding-droplet"></i></div>
                                         </div>
 
@@ -82,7 +83,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Hospital</h5>
                                         <div style="display:flex ; justify-content:space-between">
-                                            <p class="card-text" style="font-size:larger">Total Count <?php echo $thospital; ?></p>
+                                            <p class="card-text" style="font-size:larger">Total Count <span style="font-size: 18pt;"><?php echo $thospital; ?></span></p>
                                             <div><i style="font-size: 28pt;" class="fa-solid fa-hospital-user"></i></div>
                                         </div>
                                         <a href="../admin/showallhospital.php" class="btn btn-primary">View</a>
@@ -94,46 +95,46 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Branch</h5>
                                         <div style="display:flex ; justify-content:space-between">
-                                            <p class="card-text" style="font-size:larger">Total Count <?php echo $tbranch; ?></p>
+                                            <p class="card-text" style="font-size:larger">Total Count <span style="font-size: 18pt;"><?php echo $tbranch; ?></span></p>
                                             <div><i style="font-size: 28pt;" class="fa-solid fa-code-branch"></i></div>
                                         </div>
                                         <a href="../admin/showallbranch.php" class="btn btn-primary">View</a>
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
 
-                        
-                        <div class="p-3 my-2">
-                        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-                        
-                        <script>
-                            
-                            var xValues = ["AB+", "AB-", "O+", "O-", "A+","B+"];
-                            var yValues = [12, 15, 9, 10,10,13,1 ];
-                            var barColors = ["#CD4631", "#DEA47E", "#81ADC8", "orange", "#ACACDE","#B8336A"];
 
-                            new Chart("myChart", {
-                                type: "bar",
-                                data: {
-                                    labels: xValues,
-                                    datasets: [{
-                                        backgroundColor: barColors,
-                                        data: yValues
-                                    }]
-                                },
-                                options: {
-                                    legend: {
-                                        display: false
+
+                        <div class="p-3 my-2" style="margin-bottom: 30px;">
+                            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+                            <script>
+                                var xValues = ["AB+", "AB-", "O+", "O-", "A+","A-","B-","B+"];
+                                var yValues = [<?php echo $tabpos?>,<?php echo $tabneg;?>, <?php echo $topos;?>, <?php echo $toneg?>, <?php echo $tapos?>, <?php echo $taneg?>,<?php echo $tbneg;?>,<?php echo $tbpos;?>,0];
+                                var barColors = ["#CD4631", "#DEA47E", "#81ADC8", "orange", "#ACACDE", "#B8336A","#B0630A","#B8000A"];
+
+                                new Chart("myChart", {
+                                    type: "bar",
+                                    data: {
+                                        labels: xValues,
+                                        datasets: [{
+                                            backgroundColor: barColors,
+                                            data: yValues
+                                        }]
                                     },
-                                    title: {
-                                        display: true,
-                                        text: "Total Blood collection statistics"
+                                    options: {
+                                        legend: {
+                                            display: false
+                                        },
+                                        title: {
+                                            display: true,
+                                            text: "Total Blood collection statistics"
+                                        }
                                     }
-                                }
-                            });
-                        </script>
+                                });
+                            </script>
                         </div>
                     </div>
 
@@ -144,22 +145,8 @@
             </div>
         </div>
 
-        <div style="background-color: #353531;" class="container-fluid p-3">
-            <div class="row">
-                <div class="col-12 w-75">
-                    <section>
-                        <footer class="d-flex justify-content-between
-      ">
-                            <ul class="d-flex">
-                                <li><a style="color:white" class="pr-3" href="#">About</a></li>
-                                <li><a style="color:white" class="pr-3" href="#">Sitemap</a></li>
-                                <li><a style="color:white" class="pr-3" href="#">Contact</a></li>
-                            </ul>
-                            <p style="color:white" class="mr-5">&copy; arcadian software system inc.</p>
-                        </footer>
-                    </section>
-                </div>
-            </div>
+        <div>
+            <?php include '../layouts/footer.php' ?>
         </div>
 
         <?php include '../layouts/extlinks/cdn-js.php'; ?>

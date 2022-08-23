@@ -1,6 +1,7 @@
 <?php include '../layouts/extlinks/cdn-css.php'; ?>
 <?php include '../layouts/admin-nav.php' ?>
 <!-- <?php include '../../controller/branchProcess.php'?> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <?php
 $bid=$_GET['bid'];
 $bmail=$_GET['bemail'];
@@ -11,7 +12,7 @@ $zip=$_GET['zip'];
 // echo $bid;
 ?>
 
-<div class="container my-5">
+<div class="container my-5" style="min-height: 450px;">
   <h4 style="padding: 20px, 0px !important">Update Branch Details</h4>
 <form method="post" action='../../controller/branchProcess.php?bid=<?php echo $bid;?>'>
   <div class="form-row my-3">
@@ -47,7 +48,9 @@ $zip=$_GET['zip'];
 </form>
 </div>
 
-
+<div>
+  <?php include '../layouts/footer.php' ?>
+</div>
 
 
 

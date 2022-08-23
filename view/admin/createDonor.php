@@ -57,7 +57,9 @@
 </div>
 
 
-
+<div>
+  <?php include '../layouts/footer.php' ?>
+</div>
 
 
 <?php include '../layouts/extlinks/cdn-js.php'; ?>

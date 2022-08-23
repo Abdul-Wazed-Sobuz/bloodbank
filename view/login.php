@@ -5,12 +5,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <?php include './layouts/extlinks/cdn-css.php'; ?>
+    <style>
+      body{
+       background-image: url('images/bg.jpg');
+       /* background-size: cover; */
+       /* background-repeat: no-repeat; */
+       background-color: black;
+      }
+    </style>
     <title>Login</title>
   </head>
   <body>
-    <div style="color: red; padding: 20px; font-size: 2rem" class="header">
-      BdDoner.com
+    <div style="color: red; padding: 20px; font-size: 1.5rem" class="header">
+    <i style="padding:0px 5px ;color:red" class="fa-solid fa-droplet"></i>BdDoner.com
     </div>
     <div class="wrapper">
       <form class="form-signin" method="post" action="../controller/authadminController.php">
@@ -47,23 +56,14 @@
           />
           Remember me
         </label>
-        <button name="btn-login" class="btn btn-lg btn-primary btn-block" type="submit">
+        <button style="background-color: red;font-weight:600;" name="btn-login" class="btn btn-lg btn-primary btn-block" type="submit">
           Login
         </button>
       </form>
     </div>
+    <?php include './layouts/footer.php' ?>
 
-    <section>
-      <footer class="d-flex justify-content-between p-3
-      ">
-        <ul class="d-flex">
-          <li><a class="pr-3" href="#">About</a></li>
-          <li><a class="pr-3" href="#">Sitemap</a></li>
-          <li><a class="pr-3" href="#">Contact</a></li>
-        </ul>
-        <p class="mr-5">&copy; arcadian software system inc.</p>
-      </footer>
-    </section>
+    
 <?php include './layouts/extlinks/cdn-js.php'; ?>
   </body>
 </html>

@@ -20,25 +20,13 @@
                 <div class="col-10">
 
                     <h4 style="background-color: #372549;color:white" class="p-3 my-3"><i style="font-size: 16pt;margin-right:10px" class="fa-solid fa-user-large"></i>Account List</h4>
-                    <?php include '../../controller/showallaccount.php' ?>
+                    <?php include '../../controller/accountProcedure.php' ?>
                 </div>
             </div>
         </div>
-        <div class="container-fluid w-75">
-            <div class="row">
-                <div class="col-12">
-                    <section>
-                        <footer class="d-flex justify-content-between
-      ">
-                            <ul class="d-flex">
-                                <li><a class="pr-3" href="#">About</a></li>
-                                <li><a class="pr-3" href="#">Sitemap</a></li>
-                                <li><a class="pr-3" href="#">Contact</a></li>
-                            </ul>
-                            <p class="mr-5">&copy; arcadian software system inc.</p>
-                        </footer>
-                    </section>
-                </div>
+        <div>
+            <div>
+                <?php include '../layouts/footer.php' ?>
             </div>
         </div>
         <?php include '../layouts/extlinks/cdn-js.php'; ?>
