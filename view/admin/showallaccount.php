@@ -20,7 +20,7 @@
                 <div class="col-10">
 
                     <h4 style="background-color: #372549;color:white" class="p-3 my-3"><i style="font-size: 16pt;margin-right:10px" class="fa-solid fa-user-large"></i>Account List</h4>
-                    <?php include '../../controller/showallaccount.php' ?>
+                    <?php include '../../controller/accountProcedure.php' ?>
                 </div>
             </div>
         </div>

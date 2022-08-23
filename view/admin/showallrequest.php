@@ -20,7 +20,7 @@
                 <div class="col-10">
 
                     <h4 style="background-color: #4C5B5C;color:white" class="p-3 my-3"><i style="font-size: 16pt;margin-right:10px" class="fa-solid fa-hospital-user"></i>Request List</h4>
-                    <?php include '../../controller/showallrequestController.php' ?>
+                    <?php include '../../controller/requestProcedure.php' ?>
                 </div>
             </div>
         </div>

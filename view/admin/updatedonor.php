@@ -10,7 +10,6 @@ $address=$_GET['address'];
 $bgroup=$_GET['bgroup'];
 $dob=date("m/d/Y",strtotime(@$_GET['dob']));
 $ld=date("m/d/Y",strtotime(@$_GET['ld']));
-//echo $did;
 ?>
 
 
@@ -42,12 +41,12 @@ $ld=date("m/d/Y",strtotime(@$_GET['ld']));
         <div class="form-row my-3">
             <div class="form-group col-md-6">
                 <label for="dob">Date of Birth</label>
-                <input type="date" class="form-control" id="dob" value="<?php echo $dob; ?>" name="dob">
+                <input type="text" class="form-control" id="dob" value="<?php echo $dob; ?>" name="dob">
             </div>
 
             <div class="form-group col-md-6">
                 <label for="ld">Last Donation</label>
-                <input type="date" class="form-control" id="ld" value="<?php echo $ld ?>" name="ld">
+                <input type="text" class="form-control" id="ld" value="<?php echo $ld ?>" name="ld">
             </div>
         </div>
 
