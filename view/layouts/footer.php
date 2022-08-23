@@ -5,7 +5,7 @@
                         <footer class="d-flex justify-content-between
       ">
                             <ul class="d-flex">
-                                <li><a style="color:white" class="pr-3" href="#">About</a></li>
+                                <li><a style="text-decoration:none;color:white" class="pr-3" href="../about.php">About us</a></li>
                                 <li><a style="color:white" class="pr-3" href="#">Sitemap</a></li>
                                 <li><a style="color:white" class="pr-3" href="#">Contact</a></li>
                             </ul>

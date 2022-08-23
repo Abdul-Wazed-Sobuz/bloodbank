@@ -2,11 +2,11 @@
 <?php
 $conn=oci_connect('bbank','blood','localhost/xe') or die (oci_error());
 //Request does not change
-$sql = 'BEGIN SHOWBRANCH(:OUTPUT_CUR); END;';            
-
+$sql = 'BEGIN SEARCH_BRANCH_BY_ZIP(:zip,:OUTPUT_CUR); END;';            
+$zip = 1229;
 //Statement does not change
 $stmt = oci_parse($conn,$sql);                     
-// oci_bind_by_name($stmt,':POP',$pop);           
+oci_bind_by_name($stmt,':zip',$zip);           
 // oci_bind_by_name($stmt,':SEG',$seg);           
 // oci_bind_by_name($stmt,':DUR',$dur);           
 // oci_bind_by_name($stmt,':VIEW',$view);           
