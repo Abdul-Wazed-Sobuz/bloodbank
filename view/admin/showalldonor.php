@@ -20,7 +20,7 @@
                 <div class="col-10">
 
                     <h4 style="background-color: #774C60;color:white" class="p-3 my-3"><i style="font-size: 16pt;margin-right:10px" class="fa-solid fa-hand-holding-droplet"></i>Donor List</h4>
-                    <?php include '../../controller/showdonorController.php' ?>
+                    <?php include '../../controller/donorProcedure.php' ?>
                 </div>
             </div>
         </div>
